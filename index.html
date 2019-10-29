@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel=" stylesheet " href=" https://use.fontawesome.com/releases/v5.5.0/css/all.css ">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Index">Generala</div>
+    
+    <div class="btn-Contenedor" id="btn-Contenedor" >
+    <button class="btn-Inicio" onclick="JuegoNuevo()">Inicio</button>
+    </div>
+
+    <!-- numero de jugadores POPUP -->
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" onclick="cerrar('overlay','popup')"><i class="fas fa-times"></i></a>
+            <h4>Bienvenido</h4>
+            <div class="subt">Ingresa el numero de jugadores (2 a 4)</div>
+            <Form>
+                <input type="number" id="NumJug" min="2" max="4" value="0">
+                <input type="submit" class="btn-submit" id ='btn-juego-nuevo'value="Ingresar " onclick="NombreJugadores(val,elem)">
+            </Form>
+        </div>
+    </div>
+    <!-- Nombres de jugadores-->
+
+    <div class="overlay2" id="overlay2">
+        <div class="popup2" id="popup2">
+
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" onclick="cerrar('overlay2','popup2')"><i class="fas fa-times"></i></a>
+            <h4>Jugadores</h4>
+            <div class="subt">Ingresa el Nombre de los Jugadores</div>
+            <Form>
+                <p id="IncNombre">
+            </Form>
+
+            <input type="submit" class="btn-submit" id ='btn-juego-nuevo'value="Jugar" onclick="InicioJuego()">
+        </div>
+    </div>
+
+    <!-- tablero de jugadores -->
+    <div class="tabOcu Tableros" id="Tablero">
+            <!-- INICIO PRIMER TABLERO -->
+        <div class="container " id="Tbr1">
+                <h3 style="color: black;" id="TabNomJug1">Nombre1</h3>
+                <label for="g1" >
+                    <img src="./img/Dados/dice1.jpg" width="23px">
+                    <input type="text" id="g1" oninput="myFunction(this.value)"  placeholder="UNO" value="0" >
+                </label>
+            <label for="g2">
+                <img src="./img/Dados/dice2.jpg" width="23px">
+                <input type="text" id="g2" oninput="myFunction(this.value)" placeholder="DOS" value="0">
+            </label>
+            <label for="g3">
+                <img src="./img/Dados/dice3.jpg" width="23px">
+                <input type="text" id="g3" oninput="myFunction(this.value)" placeholder="TRES" value = 0>
+            </label>
+            <label for="g4">
+                    <img src="./img/Dados/dice4.jpg" width="23px">
+            <input type="text" id="g4" oninput="myFunction(this.value)" placeholder="CUATRO" value = 0>
+            </label>
+            <label for="g5">
+                    <img src="./img/Dados/dice5.jpg" width="23px">
+            <input type="text" id="g5" oninput="myFunction(this.value)" placeholder="CINCO" value = 0>
+            </label>
+            <label for="g6">
+                    <img src="./img/Dados/dice6.jpg" width="23px">
+            <input type="text" id="g6" oninput="myFunction(this.value)" placeholder="SEIS" value = 0>
+            </label>
+            <label for="g7">Esc
+            <input type="text" id="g7" oninput="myFunction(this.value)" placeholder="ESCALERA" value = 0>
+            </label>
+            <label for="g8">Full
+            <input type="text" id="g8" oninput="myFunction(this.value)" value = 0>
+            </label>
+            <label for="g9">Pok
+            <input type="text" id="g9" oninput="myFunction(this.value)"value = 0>
+            </label>
+            <label for="g10" >Gen
+            <input type="text" id="g10" oninput="myFunction(this.value)" value = 0>
+            </label>
+            <label for="g10" >Total
+            <input type="number" id="total" placeholder="Total">
+    </label>
+             <!-- INICIO SEGUNDO TABLERO -->
+        </div>
+        <!-- INICIO SEGUNDO TABLERO -->
+        <div class="container " id="Tbr2">
+                <h3 style="color: black;" id="TabNomJug2">Nombre2</h3>
+                <label for="g1" >
+                    <img src="./img/Dados/dice1.jpg" width="23px">
+                    <input type="text" id="g11" oninput="myFunction(this.value)"  placeholder="UNO" value="0" >
+                </label>
+            <label for="g2">
+                <img src="./img/Dados/dice2.jpg" width="23px">
+                <input type="text" id="g12" oninput="myFunction(this.value)" placeholder="DOS" value="0">
+            </label>
+            <label for="g3">
+                <img src="./img/Dados/dice3.jpg" width="23px">
+                <input type="text" id="g13" oninput="myFunction(this.value)" placeholder="TRES" value = 0>
+            </label>
+            <label for="g4">
+                    <img src="./img/Dados/dice4.jpg" width="23px">
+            <input type="text" id="g14" oninput="myFunction(this.value)" placeholder="CUATRO" value = 0>
+            </label>
+            <label for="g5">
+                    <img src="./img/Dados/dice5.jpg" width="23px">
+            <input type="text" id="g15" oninput="myFunction(this.value)" placeholder="CINCO" value = 0>
+            </label>
+            <label for="g6">
+                    <img src="./img/Dados/dice6.jpg" width="23px">
+            <input type="text" id="g16" oninput="myFunction(this.value)" placeholder="SEIS" value = 0>
+            </label>
+            <label for="g7">Esc
+            <input type="text" id="g17" oninput="myFunction(this.value)" placeholder="ESCALERA" value = 0>
+            </label>
+            <label for="g8">Full
+            <input type="text" id="g18" oninput="myFunction(this.value)" value = 0>
+            </label>
+            <label for="g9">Pok
+            <input type="text" id="g19" oninput="myFunction(this.value)"value = 0>
+            </label>
+            <label for="g10" >Gen
+            <input type="text" id="g110" oninput="myFunction(this.value)" value = 0>
+            </label>
+            <label for="g11" >Total
+            <input type="number" id="total2" placeholder="Total">
+    </label>      
+        </div>
+        <!-- INICIO TERCER TABLERO -->
+        <div class="container Tbr1" id="Tbr3">
+                <h3 style="color: black;" id="TabNomJug3">Nombre3</h3>
+                <label for="g21" >
+                    <img src="./img/Dados/dice1.jpg" width="23px">
+                    <input type="text" id="g21" oninput="myFunction(this.value)"  placeholder="UNO" value="0" >
+                </label>
+            <label for="g22">
+                <img src="./img/Dados/dice2.jpg" width="23px">
+                <input type="text" id="g22" oninput="myFunction(this.value)" placeholder="DOS" value="0">
+            </label>
+            <label for="g23">
+                <img src="./img/Dados/dice3.jpg" width="23px">
+                <input type="text" id="g23" oninput="myFunction(this.value)" placeholder="TRES" value = 0>
+            </label>
+            <label for="g24">
+                    <img src="./img/Dados/dice4.jpg" width="23px">
+            <input type="text" id="g24" oninput="myFunction(this.value)" placeholder="CUATRO" value = 0>
+            </label>
+            <label for="g25">
+                    <img src="./img/Dados/dice5.jpg" width="23px">
+            <input type="text" id="g25" oninput="myFunction(this.value)" placeholder="CINCO" value = 0>
+            </label>
+            <label for="g26">
+                    <img src="./img/Dados/dice6.jpg" width="23px">
+            <input type="text" id="g26" oninput="myFunction(this.value)" placeholder="SEIS" value = 0>
+            </label>
+            <label for="g27">Esc
+            <input type="text" id="g27" oninput="myFunction(this.value)" placeholder="ESCALERA" value = 0>
+            </label>
+            <label for="g28">Full
+            <input type="text" id="g28" oninput="myFunction(this.value)" value = 0>
+            </label>
+            <label for="g29">Pok
+            <input type="text" id="g29" oninput="myFunction(this.value)"value = 0>
+            </label>
+            <label for="g210" >Gen
+            <input type="text" id="g210" oninput="myFunction(this.value)" value = 0>
+            </label>
+            <label for="g10" >Total
+            <input type="number" id="total3" placeholder="Total">
+    </label>      
+        </div>
+        <!-- INICIO CUARTO TABLERO -->
+        <div class="container Tbr1" id='Tbr4'>
+            <h3 style="color: black;" id="TabNomJug4">Nombre4</h3>
+                <label for="g31" >
+                    <img src="./img/Dados/dice1.jpg" width="23px">
+                    <input type="text" id="g31" oninput="myFunction(this.value)"  placeholder="UNO" value="0" >
+                </label>
+            <label for="g32">
+                <img src="./img/Dados/dice2.jpg" width="23px">
+                <input type="text" id="g32" oninput="myFunction(this.value)" placeholder="DOS" value="0">
+            </label>
+            <label for="g33">
+                <img src="./img/Dados/dice3.jpg" width="23px">
+                <input type="text" id="g33" oninput="myFunction(this.value)" placeholder="TRES" value = 0>
+            </label>
+            <label for="g34">
+                    <img src="./img/Dados/dice4.jpg" width="23px">
+            <input type="text" id="g34" oninput="myFunction(this.value)" placeholder="CUATRO" value = 0>
+            </label>
+            <label for="g35">
+                    <img src="./img/Dados/dice5.jpg" width="23px">
+            <input type="text" id="g35" oninput="myFunction(this.value)" placeholder="CINCO" value = 0>
+            </label>
+            <label for="g36">
+                    <img src="./img/Dados/dice6.jpg" width="23px">
+            <input type="text" id="g36" oninput="myFunction(this.value)" placeholder="SEIS" value = 0>
+            </label>
+            <label for="g37">Esc
+            <input type="text" id="g37" oninput="myFunction(this.value)" placeholder="ESCALERA" value = 0>
+            </label>
+            <label for="g38">Full
+            <input type="text" id="g38" oninput="myFunction(this.value)" value = 0>
+            </label>
+            <label for="g39">Pok
+            <input type="text" id="g39" oninput="myFunction(this.value)"value = 0>
+            </label>
+            <label for="g310" >Gen
+            <input type="text" id="g310" oninput="myFunction(this.value)" value = 0>
+            </label>
+            <label for="total4" >Total
+            <input type="number" id="total4" placeholder="Total">
+    </label>      
+        </div>
+    </div>     
+    
+           
+    <script src="./js/script.js" ></script>
+</body>
+</html>
