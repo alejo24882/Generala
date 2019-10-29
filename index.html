@@ -24,10 +24,11 @@
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" onclick="cerrar('overlay','popup')"><i class="fas fa-times"></i></a>
             <h4>Bienvenido</h4>
             <div class="subt">Ingresa el numero de jugadores (2 a 4)</div>
-            <Form>
+            
                 <input type="number" id="NumJug" min="2" max="4" value="0">
-                <input type="submit" class="btn-submit" id ='btn-juego-nuevo'value="Ingresar " onclick="NombreJugadores(val,elem)">
-            </Form>
+            
+                <input type="button" class="btn-submit" id ='btn-juego-nuevo'value="Ingresar " onclick="NombreJugadores(val,elem)">
+            
         </div>
     </div>
     <!-- Nombres de jugadores-->
@@ -38,11 +39,11 @@
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" onclick="cerrar('overlay2','popup2')"><i class="fas fa-times"></i></a>
             <h4>Jugadores</h4>
             <div class="subt">Ingresa el Nombre de los Jugadores</div>
-            <Form>
-                <p id="IncNombre">
-            </Form>
+            
+                <p id="IncNombre"></p>
+            
 
-            <input type="submit" class="btn-submit" id ='btn-juego-nuevo'value="Jugar" onclick="InicioJuego()">
+            <input type="button" class="btn-submit" id ='btn-juego-nuevo'value="Jugar" onclick="InicioJuego()">
         </div>
     </div>
 
