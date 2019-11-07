@@ -94,13 +94,13 @@ body{
 }
 
 .popup h4 {
-  font-size: 40px;
+  font-size: 2.1rem;
   font-weight: 300;
   margin-bottom: 10px;
   color: #000;
 }
 .popup .subt{
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .popup input {
@@ -160,6 +160,10 @@ color: black ;
 @media screen and (max-width: 600px) {
   .container{
     margin: 0px 1px;
+  }
+  .popup.active {
+    opacity: 1;
+    transform: scale(0.9);
   }
 
 }
